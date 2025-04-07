@@ -12,19 +12,17 @@ public class Player extends Entity {
     private int playerAction = IDLE;
     private boolean moving = false, attacking = false;
     private boolean left, up, right, down;
-    private float playerSpeed = 1.0f;
+    private float playerSpeed = 2.0f;
 
 
 
-    public Player (float x, float y) {
-        super(x, y);
+    public Player (float x, float y, int width, int height) {
+        super(x, y, width, height);
         loadAnimations();
     }
 
 
     public void update() {
-
-
 
         updatePos();
         updateAnimationTick();
